@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2158364199
+              "duration": 3088681100
             }
           },
           {
@@ -27,20 +27,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4071260599
+              "duration": 4084526299
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "I login with \"stndard_user\" and \"secret_sauce\"",
+            "name": "I login with \"standard_user\" and \"secret_sauce\"",
             "match": {
               "location": "steps\\loginSteps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 228614499
+              "duration": 343920399
             }
           },
           {
@@ -52,9 +52,8 @@
               "location": "steps\\loginSteps.js:14"
             },
             "result": {
-              "status": "failed",
-              "duration": 5011575600,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\dolap\\playwright-cucumber-js\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)"
+              "status": "passed",
+              "duration": 47759299
             }
           },
           {
@@ -62,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 861613900
+              "duration": 578148300
             }
           }
         ],

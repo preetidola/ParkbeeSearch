@@ -3,6 +3,9 @@ const { chromium } = require('playwright');
 const fs =  require('fs');
 const path = require('path');
 
+if (!fs.existsSync('reports')) fs.mkdirSync('reports');
+if (!fs.existsSync('screenshots')) fs.mkdirSync('screenshots');
+
 Before(async function () {
   this.browser = await chromium.launch({ headless: false });
   this.context = await this.browser.newContext();

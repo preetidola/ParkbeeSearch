@@ -11,7 +11,7 @@ Before(async function () {
 
 After(async function (scenario) {
   if(scenario.result.status == 'FAILED') {
-    const screenshotPath = path.resolve(`screenshots/${Date.now()}--failed.png`);
+    const screenshotPath = path.resolve(`screenshots/${new Date().toISOString()}--failed.png`);
     await this.page.screenshot({path: screenshotPath, fullpage: true});
     console.log(`Screenshot saved at : ${screenshotPath}`);
   }

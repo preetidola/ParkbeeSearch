@@ -11,38 +11,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Fix Playwright permissions
-      run: chmod +x ./node_modules/.bin/playwright
+      - name: Fix Playwright permissions
+        run: chmod +x ./node_modules/.bin/playwright
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
-    - name: Run Tests
-      run: npx cucumber-js --format json:reports/cucumber_report.json
+      - name: Run Cucumber Tests
+        run: npx cucumber-js --format json:reports/cucumber_report.json
 
-    - name: Generate HTML Report
-      run: node generate-report.js
+      - name: Generate HTML Report
+        run: node generate-report.js
 
-    - name: Upload Test Reports Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: cucumber-html-report
-        path: reports
+      - name: Upload Test Reports Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: reports
 
-    - name: Upload Screenshots Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: failure-screenshots
-        path: reports/screenshots
-        if-no-files-found: ign
+      - name: Upload Screenshots Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: failure-screenshots
+          path: reports/screenshots
+          if-no-files-found: ignore

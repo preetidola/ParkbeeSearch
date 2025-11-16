@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 798261000
+              "duration": 186050099
             }
           },
           {
@@ -26,9 +26,8 @@
               "location": "steps\\bookingSteps.ts:6"
             },
             "result": {
-              "status": "failed",
-              "duration": 5020035699,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\dolap\\Parkbeeplaywright-cucumber-js\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:581:17)\n    at processTimers (node:internal/timers:519:7)"
+              "status": "passed",
+              "duration": 3977468500
             }
           },
           {
@@ -40,8 +39,8 @@
               "location": "steps\\bookingSteps.ts:19"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 170426600
             }
           },
           {
@@ -50,20 +49,19 @@
             "line": 6,
             "name": "the search field should display an error outline",
             "match": {
-              "location": "steps\\bookingSteps.ts:27"
+              "location": "steps\\bookingSteps.ts:29"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 12356999
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "failed",
-              "duration": 408350199,
-              "error_message": "Error: ENOENT: no such file or directory, open 'C:\\Users\\dolap\\Parkbeeplaywright-cucumber-js\\reports\\screenshots\\2025-11-16T14:13:17.173Z--failed.png'\n    at async open (node:internal/fs/promises:639:25)\n    at async Object.writeFile (node:internal/fs/promises:1212:14)\n    at async Page.screenshot (C:\\Users\\dolap\\Parkbeeplaywright-cucumber-js\\node_modules\\playwright-core\\lib\\client\\page.js:473:7)\n    at async CustomWorld.<anonymous> (C:\\Users\\dolap\\Parkbeeplaywright-cucumber-js\\support\\hooks.ts:30:7)"
+              "status": "passed",
+              "duration": 86756400
             }
           }
         ],
@@ -82,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 847788800
+              "duration": 195238199
             }
           },
           {
@@ -95,7 +93,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4080361499
+              "duration": 2536386900
             }
           },
           {
@@ -108,7 +106,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1249273300
+              "duration": 856199099
             }
           },
           {
@@ -121,7 +119,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1732129600
+              "duration": 975653400
             }
           },
           {
@@ -130,11 +128,11 @@
             "line": 12,
             "name": "I should be navigated to the search results page",
             "match": {
-              "location": "steps\\bookingSteps.ts:31"
+              "location": "steps\\bookingSteps.ts:33"
             },
             "result": {
               "status": "passed",
-              "duration": 4496453699
+              "duration": 9286635500
             }
           },
           {
@@ -143,11 +141,11 @@
             "line": 13,
             "name": "I should see recommended location",
             "match": {
-              "location": "steps\\bookingSteps.ts:35"
+              "location": "steps\\bookingSteps.ts:38"
             },
             "result": {
               "status": "passed",
-              "duration": 4663854699
+              "duration": 4938598099
             }
           },
           {
@@ -156,11 +154,11 @@
             "line": 14,
             "name": "the map should be visible",
             "match": {
-              "location": "steps\\bookingSteps.ts:43"
+              "location": "steps\\bookingSteps.ts:46"
             },
             "result": {
               "status": "passed",
-              "duration": 46951400
+              "duration": 19758200
             }
           },
           {
@@ -169,11 +167,11 @@
             "line": 15,
             "name": "I should see the auto-filled from and until date/time",
             "match": {
-              "location": "steps\\bookingSteps.ts:49"
+              "location": "steps\\bookingSteps.ts:52"
             },
             "result": {
               "status": "passed",
-              "duration": 151336200
+              "duration": 51772400
             }
           },
           {
@@ -181,7 +179,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 792549800
+              "duration": 63627700
             }
           }
         ],

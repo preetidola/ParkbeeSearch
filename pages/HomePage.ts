@@ -6,7 +6,7 @@ export class HomePage {
   searchButton: Locator;
   searchLabel: Locator;
 
-  // New locators for the FROM and UNTIL timestamps
+  //locators for the FROM and UNTIL timestamps
   fromTime: Locator;
   untilTime: Locator;
 
@@ -19,8 +19,7 @@ export class HomePage {
     this.searchButton = this.page.locator('button:has-text("Search")');
     // Parent wrapper of search input (for error outline)
     this.searchLabel = this.searchInput.locator('xpath=..');
-
-    // These two <p> tags appear in order: FROM is the first, UNTIL is the second
+    
     const dateBlock = page.locator('div', {
         has: page.locator('ng-icon[name="mat-calendar-today"]')
       });
@@ -38,9 +37,8 @@ export class HomePage {
   }
 
  async selectSuggestion(fullText: string) {
-  // Locate the <li> whose combined <span> text contains the full text
-  const option = this.page.locator('ul > li', {
-    has: this.page.locator('div >> span', { hasText: fullText.split(' ')[0] }) // partial match first word
+    const option = this.page.locator('ul > li', {
+    has: this.page.locator('div >> span', { hasText: fullText.split(' ')[0] })
   });
 
   // Wait for the first matching option to be visible
@@ -60,16 +58,13 @@ export class HomePage {
   let fromDate = new Date(now);
 
   // --- Special ParkBee rounding rules ---
-  if (currentMinutes >= 40 && currentMinutes <= 44) {
-    // Example: 04:40–04:44 → 05:00
+  if (currentMinutes >= 40 && currentMinutes <= 44) {   
     fromDate.setHours(fromDate.getHours() + 1, 0, 0, 0);
   } 
   else if (currentMinutes >= 45) {
-    // Example: 04:45–04:59 → 05:15
     fromDate.setHours(fromDate.getHours() + 1, 15, 0, 0);
   } 
-  else {
-    // NORMAL ROUNDING TO NEXT 15-MINUTE INTERVAL
+  else {    
     const remainder = currentMinutes % 15;
     const addMinutes = remainder === 0 ? 30 : 30 - remainder;
     fromDate.setMinutes(currentMinutes + addMinutes, 0, 0);
@@ -91,8 +86,8 @@ export class HomePage {
       
 
   return {
-    from: format(fromDate),   // e.g. "Nov 16 05:15"
-    until: format(untilDate)  // e.g. "Nov 16 07:15"
+    from: format(fromDate),   
+    until: format(untilDate)  
   };
 }
 }

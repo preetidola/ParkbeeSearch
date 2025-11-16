@@ -1,5 +1,5 @@
 {
-  "name": "agrobricks-testing",
+  "name": "parkbeesearch-testing",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,10 @@
   "description": "",
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
+    "@types/node": "^24.10.1",
     "cucumber-html-reporter": "^7.2.0",
-    "playwright": "^1.53.2"
+    "playwright": "^1.53.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

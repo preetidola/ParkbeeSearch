@@ -1,15 +1,6 @@
-# Ignore Playwright output
-test-results/
+node_modules
+reports/
 screenshots/
-videos/
-
-node_modules/
-
-# Logs
-*.log
-
-# Environment variables
+test-results/
+playwright-report/
 .env
-
-# System files
-.DS_Store

@@ -22,6 +22,9 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Fix Playwright permissions
+      run: chmod +x ./node_modules/.bin/playwright
+
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
@@ -42,4 +45,4 @@ jobs:
       with:
         name: failure-screenshots
         path: reports/screenshots
-        if-no-files-found: ignore
+        if-no-files-found: ign

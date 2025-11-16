@@ -16,7 +16,7 @@ export class HomePage {
     // Search input
     this.searchInput = this.page.locator('input[placeholder="Search place or address"]');
     // Search button
-    this.searchButton = this.page.locator('button:has-text("Suearch")');
+    this.searchButton = this.page.locator('button:has-text("Search")');
     // Parent wrapper of search input (for error outline)
     this.searchLabel = this.searchInput.locator('xpath=..');
 

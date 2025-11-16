@@ -8,6 +8,10 @@ This repository contains **automated end-to-end tests** for the ParkBee applicat
 - **cucumber-html-reporter** for generating HTML reports  
 - **GitHub Actions** for CI/CD
 
+The tests cover scenarios such as:
+ 1. Booking tab shows an error when searching with an empty location
+ 2. Selecting an autocomplete location navigates to the search results page automatically
+
 ---
 
 ## Project Structure
@@ -26,13 +30,13 @@ This repository contains **automated end-to-end tests** for the ParkBee applicat
 
 ---
 
-## ⚡ Setup Instructions
+## Setup Instructions
 
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/<your-username>/ParkbeeSearch.git
-cd ParkbeePlaywright-Cucumber-JS
+git clone https://github.com/preetidola/ParkbeeSearch.git
+cd ParkbeeSearch
 
 2. Install dependencies
 npm install
@@ -45,10 +49,8 @@ npm install --save-dev playwright
 npx playwright install
 
 
-5. Running Tests
-Locally (headed)
-npx cucumber-js --format json:reports/cucumber_report.json
-npm run report
+5. Running Tests Locally
+npm run test:report
 
 6. CI / Headless Mode
 GitHub Actions automatically runs Playwright in headless mode on Linux runners.
@@ -59,11 +61,3 @@ reports/cucumber_report.html
 
 8. GitHub Actions CI
 Workflow: .github/workflows/test.yml
-
-9. Useful Commands
-# Run tests with JSON output
-npx cucumber-js --format json:reports/cucumber_report.json
-
-# Generate HTML report
-npm run report
-

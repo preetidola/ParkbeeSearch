@@ -28,6 +28,9 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Fix Cucumber permissions
+        run: chmod +x ./node_modules/.bin/cucumber-js
+
       - name: Run Cucumber Tests
         run: npx cucumber-js --format json:reports/cucumber_report.json
 
